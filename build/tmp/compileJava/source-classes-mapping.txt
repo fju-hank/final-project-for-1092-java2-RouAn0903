@@ -1,2 +1,2 @@
-com/fju/Tester.java
- com.fju.Tester
+com/fju/CarRace.java
+ com.fju.CarRace
