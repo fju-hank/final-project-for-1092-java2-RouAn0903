@@ -1,8 +1,6 @@
 package com.fju;
 
 import javax.swing.*;
-import java.awt.*;
-
 
 public class CarRace {
     private JFrame frame;
