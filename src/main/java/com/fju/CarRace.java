@@ -1,10 +1,9 @@
 package com.fju;
 
-import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
+import java.awt.event.*;
 import java.util.Objects;
+import javax.swing.*;
 
 public class CarRace {
     private JFrame frame;
@@ -23,6 +22,7 @@ public class CarRace {
         resetBtn = new JButton("重設");
         cars = new Car[]{new Car(1), new Car(2),  new Car(3), new Car(4), new Car(5)};
     }
+
     public void launchFrame() {
         frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         messageLabel.setHorizontalAlignment(SwingConstants.CENTER);
@@ -82,7 +82,6 @@ public class CarRace {
         CarRace gui = new CarRace();
         gui.launchFrame();
     }
-
     class Car extends JLabel implements Runnable {
         private int track;
 
@@ -99,8 +98,8 @@ public class CarRace {
             while (!gameCompleted) {
                 this.setLocation(this.getLocation().x + (int) (Math.random() * 50), this.getLocation().y);
                 if (this.getLocation().x > 750) {
-                   gameCompleted = true;
-                   messageLabel.setText("比賽結束!第"+track+"台車獲勝!");
+                    gameCompleted = true;
+                    messageLabel.setText("比賽結束!第"+track+"台車獲勝!");
                 }
                 try {
                     Thread.sleep(100);
